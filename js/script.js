@@ -61,3 +61,5 @@ generatePasswordButton.addEventListener('click', () => {
     )
 })
 
+
+
