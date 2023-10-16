@@ -1,3 +1,8 @@
+:root {
+    --white-color: #f5f5f5;
+    --background-color: #171515; 
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,16 +12,22 @@
 }
 
 html, body {
-    height: auto;  /*Degredê de fundo conforme a imagem for aumentando*/
+    height: auto; 
     min-height: 100vh;
 }
 
 html {
-    background: linear-gradient(180deg, #ea02ff, #0097ff);
+    background: var(--background-color) ;
 }
 
 input:focus {
     outline: none;
+    color: var(--white-color);
+}
+
+::placeholder {
+    color: #c0c0c0;
+    padding: 0.3em;
 }
 
 #register_container {
@@ -24,8 +35,9 @@ input:focus {
     min-height: 80vh;
     margin: 2rem auto;
     display: flex;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    border: 3px double  var(--white-color);
+
 }
 
 #register_banner {
@@ -37,7 +49,7 @@ input:focus {
 
 
 #banner_layer {
-    background-color: rgba(25, 11, 122, 0.7);
+    background-color: rgb(0, 0, 0, 0.6);
     height: 100%;
     padding: 2rem;
     display: flex;
@@ -47,12 +59,11 @@ input:focus {
 #register_banner h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--white-color);
     word-spacing: 50rem;
 }
 
 #register_form {
-    background-color: #fdfdfd;
     padding: 2rem;
     width: 50%;
     display: flex;
@@ -62,12 +73,13 @@ input:focus {
 #register_form h2 {
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--white-color);
 }
 
 #register_form p {
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #aaa;
+    color: var(--white-color);
     font-size: 0.8rem;
 }
 
@@ -80,12 +92,15 @@ input:focus {
 .form_control label {
     font-weight: bold;
     margin-bottom: .6rem;
+    color: var(--white-color);
 }
 
 .form_control input {
     border: none;
-    border-bottom: 1px solid #aaa;
-    padding: .6rem 0;
+    padding: 0.5em;
+    background-color:#363636;
+    color: var(--white-color);
+    border-radius: 5px;
 }
 
 #generate_password {
@@ -93,6 +108,7 @@ input:focus {
     cursor: poiter;
     transition: .4s;
     cursor: pointer;
+    color: #81d340;
 }
 
 #generate_password:hover {
@@ -126,6 +142,7 @@ input:focus {
     cursor: pointer;
     align-self: flex-end;
     transition: 0.4s;
+    color: var(--white-color);
 }
 
 #register_form input[type="submit"]:hover {
