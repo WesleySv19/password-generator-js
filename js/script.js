@@ -46,8 +46,8 @@ const generatePassword = (getLetterLowerCase, getLetterUpperCase, getNumber, get
     }
 
     password = password.slice(0, passwordLength)
-
     generatedPasswordElement.style.display = 'block'
+    generatedPasswordElement.querySelector('h4').style.color = '#f5f5f5'
     generatedPasswordElement.querySelector('h4').innerText = password
 }
 
